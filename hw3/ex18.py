@@ -5,3 +5,16 @@
 # . Последняя строка
 # содержит число X
 
+items = [10, 5, 7, 4, 6, 2, 9, 2, 7, 4]
+x = 9
+
+
+def value(items, x):
+    found = items[0]
+    for item in items:
+        if abs(item - x) < abs(found - x):
+            found = item
+    return found
+
+
+print(f'Ближайшее число к {x} в списке {items} является {value(items, x)}')
